@@ -7,6 +7,6 @@
 #    path: /
 #    controller: App\Controller\LuckyController::number
 
-accueil:
-      path: /
-      controller: App\Controller\HelloController::home
+#accueil:
+#      path: /Identification
+#      controller: App\Controller\HelloController::home

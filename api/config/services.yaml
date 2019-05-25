@@ -33,3 +33,7 @@ services:
     App\Services\MailLogger:
         arguments:
             $adminEmail: '%admin_email%'
+
+
+    App\Security\LoginFormAuthenticator:
+        $userProvider: '@security.user.provider.concrete.backend_users'

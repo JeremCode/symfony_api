@@ -11,25 +11,11 @@ use Symfony\Component\HttpFoundation\Response;
 class HelloController extends AbstractController
 {
     /**
-     * @Route("/machin/{nom}")
+     * @Route("/")
      */
-    public function home($nom)
+    public function home()
     {
-
-      return $this->render('general/accueil.html.twig',['environnement' => $_SERVER['APP_ENV'] , 'info' => $nom]);
-
-      /*$response = new Response();
-      $response->setContent(
-          '<html>
-          <body> Page d\'accueil de l\'environnement '.$_SERVER['APP_ENV'].'
-
-          </body></html>');
-      $response->setStatusCode(Response::HTTP_OK);
-      $response->headers->set('Content-Type', 'text/html');
-
-      // Retourne une réponse HTTP valide
-      return $response;
-      */
+      return $this->render('general/accueil.html.twig',['environnement' => $_SERVER['APP_ENV'] ]);
     }
 
     /**
@@ -50,17 +36,27 @@ class HelloController extends AbstractController
     }
 
     /**
-   * @Route("/identification")
+   * @Route("/Identification/")
    */
     public function identification()
     {
       $response = new Response();
       $response->setContent(
           '<html>
-          <body> Hello coucou 
+          <body> Hello coucou
           </body></html>');
       $response->setStatusCode(Response::HTTP_OK);
       $response->headers->set('Content-Type', 'text/html');
+
+      return $response;
+    }
+
+    /**
+   * @Route("/compteur/")
+   */
+    public function compteur()
+    {
+        return $this->render('general/compteur.php.twig',['environnement' => $_SERVER['APP_ENV'] ]);
     }
 
 }
