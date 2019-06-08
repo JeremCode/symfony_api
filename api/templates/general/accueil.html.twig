@@ -1,7 +1,12 @@
 {# templates/general/accueil.twig #}
-<html>
+{% block head %}
+  <title>accueil</title>
+  {% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+  {% endblock %}
+{% endblock %}
 <body> Page d'accueil de l'environnement {{environnement}}
-<form name="identification" action="http://symfony.localhost/Identification" method="POST">
+<form name="identification" action="http://symfony.localhost/compteur" method="POST">
   <h1>Identification</h1>
   <h4>Identifiant</h4>
   <input type="texte" name="identifiant"/><br/>
@@ -9,4 +14,4 @@
   <input type="texte" name="MotDePasse"/><br/>
   <input type="submit" value="Par ici les data"/>
 </form>
-</body></html>
+</body>

@@ -1,11 +1,10 @@
 {% extends "base.html.twig" %}
 {# templates/general/accueil2.php.twig #}
-
-  {% block stylesheets %}
-    <link rel="stylesheet" href="/CSS/style.css"/>
-    {% endblock %}
   {% block head %}
     <title>compteur</title>
+    {% block stylesheets %}
+      {{ encore_entry_link_tags('app') }}
+    {% endblock %}
   {% endblock %}
   {% block body %}
     <div id="bandeauentete">bandeauentete</div>

@@ -15,7 +15,7 @@ class HelloController extends AbstractController
      */
     public function home()
     {
-      return $this->render('general/accueil.html.twig',['environnement' => $_SERVER['APP_ENV'] ]);
+      return $this->render('general/accueil.html.twig',['environnement' => $_SERVER['APP_ENV']] );
     }
 
     /**
@@ -36,27 +36,20 @@ class HelloController extends AbstractController
     }
 
     /**
-   * @Route("/Identification/")
+   * @Route("/identification/")
    */
     public function identification()
     {
-      $response = new Response();
-      $response->setContent(
-          '<html>
-          <body> Hello coucou
-          </body></html>');
-      $response->setStatusCode(Response::HTTP_OK);
-      $response->headers->set('Content-Type', 'text/html');
-
-      return $response;
+      return $this->render('general/accueil2.php.twig',['environnement' => $_SERVER['APP_ENV'] ]);
     }
 
     /**
-   * @Route("/compteur/")
+   * @Route("/compteur")
    */
     public function compteur()
     {
-        return $this->render('general/compteur.php.twig',['environnement' => $_SERVER['APP_ENV'] ]);
+            $varempl = getcwd();
+        return $this->render('general/compteur.php.twig',['environnement' => $_SERVER['APP_ENV'] ,'varempl' => $varempl ]);
     }
 
 }

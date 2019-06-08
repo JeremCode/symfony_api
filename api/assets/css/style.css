@@ -1,0 +1,47 @@
+
+#bandeauentete{
+  text-align: center;
+}
+#bandeauheader{
+  text-align: center;
+}
+#corps{
+  display:flex;
+}
+#navgauche{
+  float:left;
+  width:10%;
+  height: 40%;
+  background-color: #1E949E;
+    flex-grow: 1;
+}
+#construction{
+  flex-grow: 12;
+}
+#navdroite{
+  float:right;
+  width:10%;
+  height: 40%;
+  background-color: #12949A;
+    flex-grow: 1;
+}
+#bandeaufooter{
+  text-align: center;
+}
+#bandeaubas{
+  text-align: center;
+}
+
+table{
+  width:100%;
+  padding-left: 10px;
+  padding-right:10px;
+}
+thead tr {
+  height: 20px;
+  background-color: #E226A2;
+}
+tbody tr {
+  height: 50px;
+  background-color: grey;
+}

@@ -8,5 +8,5 @@
 #    controller: App\Controller\LuckyController::number
 
 #accueil:
-#      path: /Identification
-#      controller: App\Controller\HelloController::home
+#      path: /
+#      controller: App\Controller\HelloController::index
